@@ -1,13 +1,20 @@
 package com.agenciacristal.crud.product;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
+@Entity
+@Table
+
 
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private float price;
     private LocalDate fecha;
-    public int antiguedad;
+    private int antiguedad;
 
     public Product() {
     }
